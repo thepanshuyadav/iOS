@@ -87,10 +87,6 @@ class ViewController: UIViewController {
         }
     }
     
-    // TODO: Add new game button
-    
-    
-    
     var emoji = [Int : String]()
     
     func emoji(for card:Card) -> String {
