@@ -47,8 +47,8 @@ class ViewController: UIViewController {
     
     // TODO: Add new game button
     
-    var emojiChoices = ["🌚","👻","👹","🎃"]
-
+    var emojiChoices = ["🌚","👻","👹","🎃","😈","💀","🙀","😱","☠️"]
+    
     var emoji = [Int : String]()
     
     func emoji(for card:Card) -> String {
