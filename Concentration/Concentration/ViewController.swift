@@ -66,8 +66,8 @@ class ViewController: UIViewController {
         for index in game.cards.indices {
             game.cards[index].isMatched = false
             game.cards[index].isFacedUp = false
-            flipCountLabel.text = "0"
-            scoreCardLabel.text = "0"
+            flipCountLabel.text = "Flips : 0"
+            scoreCardLabel.text = "Score : 0"
             selectTheme(numberOfThemes: themes.count)
             updateViewFromModel()
         }
@@ -89,7 +89,7 @@ class ViewController: UIViewController {
     
     var emoji = [Int : String]()
     
-    func emoji(for card:Card) -> String {
+    func emoji(for card: Card) -> String {
         if emoji[card.identifier] == nil, emojiChoices.count>0 {
             let randomIndex = Int(arc4random_uniform(UInt32(emojiChoices.count)))
             emoji[card.identifier] = emojiChoices.remove(at: randomIndex)
