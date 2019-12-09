@@ -230,6 +230,9 @@
                                         <state key="normal" title="   New Game   ">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="startNewGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="McS-xi-A8K"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -247,6 +250,8 @@
                     </view>
                     <connections>
                         <outlet property="flipCountLabel" destination="CWi-mX-xId" id="6F5-kr-MvM"/>
+                        <outlet property="newGameButton" destination="EWM-zP-aQg" id="Ldg-Rg-bnx"/>
+                        <outlet property="scoreCardLabel" destination="d6a-Wa-THD" id="1G1-Yc-8kY"/>
                         <outletCollection property="cardButtons" destination="oyh-2E-fGe" collectionClass="NSMutableArray" id="l56-jd-0vb"/>
                         <outletCollection property="cardButtons" destination="kix-6S-gvA" collectionClass="NSMutableArray" id="4RK-K0-wfo"/>
                         <outletCollection property="cardButtons" destination="hUO-jn-eD8" collectionClass="NSMutableArray" id="vdy-BI-Er4"/>
