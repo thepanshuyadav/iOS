@@ -27,7 +27,7 @@
 		D607C6422379BE7D0000680A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D607C6442379BE7D0000680A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D65B4B6B239A63E60090C5D2 /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
-		D65B4B6F239A68300090C5D2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = SOURCE_ROOT; };
+		D65B4B6F239A68300090C5D2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Card.swift; path = Concentration/Card.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +60,9 @@
 		D607C6352379BE7B0000680A /* Concentration */ = {
 			isa = PBXGroup;
 			children = (
-				D65B4B6F239A68300090C5D2 /* Card.swift */,
 				D607C64A2379BF550000680A /* Supporting  Files */,
 				D607C63A2379BE7B0000680A /* ViewController.swift */,
+				D65B4B6F239A68300090C5D2 /* Card.swift */,
 				D607C63C2379BE7B0000680A /* Main.storyboard */,
 				D65B4B6B239A63E60090C5D2 /* Concentration.swift */,
 				D607C6442379BE7D0000680A /* Info.plist */,
