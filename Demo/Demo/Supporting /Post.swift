@@ -10,7 +10,25 @@ import SwiftUI
 
 struct Post: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack{
+                Image("user")
+                    .resizable()
+                    .frame(width: 30, height: 30)
+                Text("@unofficialnsut")
+                Spacer()
+            }.padding(10)
+            HStack{
+                Image("demo")
+                .resizable()
+                .frame(width: 400, height: 400)
+                .cornerRadius(10)
+                
+            }
+        }
+        
+        
+        
     }
 }
 
