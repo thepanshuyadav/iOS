@@ -7,25 +7,42 @@
 //
 
 import UIKit
-@IBDesignable
+@IBDesignable 
 class PlayingCardView: UIView {
-    
-    var rank: Int = 11 {
+    @IBInspectable
+    var rank: Int = 12 {
         didSet {
             setNeedsDisplay()
             setNeedsLayout()
         }
     }
-    var suit: String = "♥️" {
+    @IBInspectable
+    var suit: String = "♦️" {
         didSet {
             setNeedsDisplay()
             setNeedsLayout()
         }
     }
-    var isFaceUp:Bool = false {
+    @IBInspectable
+    var isFaceUp:Bool = true {
         didSet {
             setNeedsDisplay()
             setNeedsLayout()
+        }
+    }
+    var faceCardScale: CGFloat = SizeRatio.faceCardImageSizeToBoundsSize {
+        didSet {
+            setNeedsDisplay()
+
+        }
+    }
+    @objc func adjustFaceCardScale(byHandlingGestureRecognisedBy recognizer: UIPinchGestureRecognizer) {
+        switch recognizer.state {
+        case .changed,.ended:
+            faceCardScale *= recognizer.scale
+            recognizer.scale = 1.0
+        default:
+            break
         }
     }
     private func centeredAttributedString(_ string: String, fontSize: CGFloat) ->NSAttributedString {
@@ -84,14 +101,14 @@ class PlayingCardView: UIView {
         UIColor.white.setFill()
         roundedRect.fill()
         if isFaceUp {
-            if let faceCardImage = UIImage(named: rankString) {
-                faceCardImage.draw(in: bounds.zoom(by: SizeRatio.faceCardImageSizeToBoundsSize))
+            if let faceCardImage = UIImage(named: rankString, in: Bundle(for: self.classForCoder), compatibleWith: traitCollection) {
+                faceCardImage.draw(in: bounds.zoom(by: faceCardScale))
             } else {
                 drawPips()
             }
         }
         else {
-            if let cardBackImage = UIImage(named: "cardBack") {
+            if let cardBackImage = UIImage(named: "cardBack", in: Bundle(for: self.classForCoder), compatibleWith: traitCollection) {
                 cardBackImage.draw(in: bounds)
             }
             
